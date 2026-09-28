@@ -1,0 +1,11 @@
+// [PLACEHOLDER] sample problems. Replace with official statements. track: "novice" | "expert".
+const submission = ['Source code repository link', 'Short demo video (max 3 min)', 'Presentation deck (PDF)'];
+const constraints = ['Team must build during the event window', 'Open-source libraries allowed with attribution'];
+export const problems = [
+  { id: 'ps-01', title: 'Campus Assistant Chatbot', domain: 'AI/ML', track: 'expert', short: 'Answer student queries about campus services using an AI assistant.', background: 'Students often struggle to find timetables, notices and forms.', expected: 'A chatbot with a searchable knowledge base and a simple UI.', constraints, submission },
+  { id: 'ps-02', title: 'Event Registration Portal', domain: 'Web', track: 'novice', short: 'Build a clean web portal for club event registration.', background: 'Clubs rely on scattered forms and spreadsheets.', expected: 'Responsive portal with registration, confirmation and an admin list.', constraints, submission },
+  { id: 'ps-03', title: 'Campus Navigation App', domain: 'App', track: 'novice', short: 'A mobile-friendly app to find departments, labs and facilities.', background: 'New students and visitors find it hard to locate places.', expected: 'App with search, categories and directions.', constraints, submission },
+  { id: 'ps-04', title: 'Smart Water Usage Monitor', domain: 'IoT', track: 'expert', short: 'Track and visualise water consumption with sensors.', background: 'Water wastage goes unnoticed without data.', expected: 'Sensor prototype plus dashboard with alerts.', constraints, submission },
+  { id: 'ps-05', title: 'Waste Sorting Vision', domain: 'AI/ML', track: 'expert', short: 'Classify waste from images to encourage proper segregation.', background: 'Incorrect segregation reduces recycling efficiency.', expected: 'Model plus demo interface with accuracy report.', constraints, submission },
+  { id: 'ps-06', title: 'Open Innovation', domain: 'Open Innovation', track: 'novice', short: 'Pick a real-world problem of your choice and solve it.', background: 'Great ideas do not always fit a fixed list.', expected: 'A clearly defined problem and a working solution.', constraints, submission },
+].map((p) => ({ ...p, placeholder: true }));

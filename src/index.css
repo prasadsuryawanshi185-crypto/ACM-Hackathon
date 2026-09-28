@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-ink text-white antialiased overflow-x-hidden; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-brand-teal; }
+}
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .card { @apply rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm transition hover:border-brand-teal/50 hover:bg-white/[0.06]; }
+  .btn { @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition active:scale-95; }
+  .btn-primary { @apply bg-gradient-to-r from-brand-teal to-brand-purple text-white shadow-[0_0_30px_-5px_#8659e6] hover:brightness-110; }
+  .btn-ghost { @apply border border-white/20 text-white hover:bg-white/10; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.25em] text-brand-teal; }
+  .grad-text { @apply bg-gradient-to-r from-brand-teal via-brand-purple to-brand-purple bg-clip-text text-transparent; }
+  .tag { @apply rounded-full border border-amber-400/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-amber-300; }
+  .grid-bg { background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); }
+}
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+@keyframes twinkle { 0%,100% { opacity: .15 } 50% { opacity: .9 } }
+.float { animation: float 7s ease-in-out infinite; }
+.twinkle { animation: twinkle 4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .float, .twinkle { animation: none; } }
